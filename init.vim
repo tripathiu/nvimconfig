@@ -28,7 +28,6 @@ nnoremap <silent> <C-k>l  :Tnext<CR>
 nnoremap <silent> <C-k>h  :Tprev<CR>
 
 let g:neoterm_size = 10
-let g:neoterm_autoinsert = 1
 let g:neoterm_default_mod = 'botright'
 let g:neoterm_autoscroll = 1
 let g:neoterm_fixedsize = 1
@@ -184,6 +183,19 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
 
+"" My coc extensions
+
+let g:coc_global_extensions = [
+      \'coc-html',
+      \'coc-git',
+      \'coc-tsserver',
+      \'coc-python',
+      \'coc-clangd',
+      \'coc-json',
+      \'coc-markdownlint',
+      \]
+
+
 """ Essentials
 set encoding=utf-8
 set cmdheight=2
@@ -198,7 +210,7 @@ imap jj <Esc>
 set number
 set relativenumber
 set mouse=a
-" colo gruvbox
+colo gruvbox
 
 func! s:my_colors_setup() abort
     hi Pmenu ctermfg=Grey ctermbg=236
