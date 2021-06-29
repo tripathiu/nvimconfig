@@ -31,6 +31,7 @@ let g:neoterm_size = 10
 let g:neoterm_default_mod = 'botright'
 let g:neoterm_autoscroll = 1
 let g:neoterm_fixedsize = 1
+let g:neoterm_autoinsert = 1
 
 " Place a new terminal on the basis of window width
 " let g:neoterm_callbacks = {}
