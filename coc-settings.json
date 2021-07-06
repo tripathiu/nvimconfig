@@ -1,10 +1,25 @@
 {
 	"python.jediEnabled": false, 
   "coc.preferences.formatOnSaveFiletypes": [
-    "python"
+    "python",
+    "h",
+    "cpp",
+    "hpp"
   ],
-  "clangd.path": "C:\\Users\\triut\\AppData\\Local\\coc\\extensions\\coc-clangd-data\\install\\12.0.0\\clangd_12.0.0\\bin\\clangd.exe",
-  "diagnostic.errorSign": "❌",
-  "diagnostic.warningSign": "❕",
-  "diagnostic.infoSign": "⚪"
+  "diagnostic.errorSign": "⛌",
+  "diagnostic.warningSign": "!",
+  "diagnostic.infoSign": "i",
+
+  "languageserver": {
+    "ccls":{
+      "command": "ccls",
+      "filetypes": [ "c", "cpp", "cc", "c++", "h", "hh", "hpp", "h++" ],
+      "rootPatterns": ["compile_commands.json", ".git/", ".hg"],
+      "initializationOptions": {
+        "cache": {
+          "directory": "/tmp/ccls"
+        }
+      }
+    }
+  },
 }

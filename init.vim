@@ -8,6 +8,7 @@ Plug 'preservim/nerdtree'
 Plug 'morhetz/gruvbox'
 Plug 'kassio/neoterm'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'APZelos/blamer.nvim'
 call plug#end()
 
 
@@ -19,6 +20,8 @@ endif
 
 
 """ PLUGIN SPECIFIC SETTINGS
+
+
 
 """ Neoterm
 nnoremap <silent> <C-k>/  :Ttoggle<CR>
@@ -191,7 +194,6 @@ let g:coc_global_extensions = [
       \'coc-git',
       \'coc-tsserver',
       \'coc-python',
-      \'coc-clangd',
       \'coc-json',
       \'coc-markdownlint',
       \]
@@ -227,11 +229,12 @@ augroup END
 nnoremap <silent> <C-k>e  :NERDTreeToggle<CR>
 nnoremap <silent> <C-k>m  :<C-u>CocList diagnostics<cr>
 nnoremap <silent> ?       :CocAction<cr>
-" noremap  <M-j>            <Down>
-" noremap  <M-k>            <Up>
-" noremap  <M-h>            <Left>
-" noremap  <M-l>            <Right>
+noremap  <silent> <C-Up>       :resize -2<CR>
+noremap  <silent> <C-Down>     :resize +2<CR>
+noremap  <silent> <C-Right>    :vertical resize -2<CR>
+noremap  <silent> <C-Left>     :vertical resize +2<CR>
 
 " Remove search hl on escape
 
 nnoremap <silent> <Esc>   :nohl<CR>
+
